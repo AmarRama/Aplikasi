@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="389.0" prefWidth="514.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sewadvd.FXMLDocumentController">
+   <children>
+      <AnchorPane id="AnchorPane" focusTraversable="true" layoutX="7.0" layoutY="5.0" prefHeight="522.0" prefWidth="427.0" scaleShape="false" style="-fx-background-color: black;">
+         <children>
+            <Button fx:id="Button2" layoutX="134.0" layoutY="314.0" mnemonicParsing="false" onAction="#Klikkedua" onMouseClicked="#Klikkedua" prefHeight="25.0" prefWidth="65.0" text="Oke" />
+            <Label fx:id="judul" layoutX="127.0" layoutY="14.0" prefHeight="39.0" prefWidth="246.0" text="Data Sewa Dvd" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Jokerman" size="27.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f8d10e" />
+                        <Stop color="#380dd3" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="lnama" layoutX="41.0" layoutY="75.0" prefHeight="28.0" prefWidth="77.0" text="Nama">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#2810e0" />
+                        <Stop color="#ced10f" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <TextField fx:id="editnama" layoutX="204.0" layoutY="77.0" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: blue;" />
+            <Label fx:id="lalamat" layoutX="41.0" layoutY="109.0" text="Alamat">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f8d10e" />
+                        <Stop color="#3508c6" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <TextField fx:id="editalamat" layoutX="204.0" layoutY="110.0" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: blue;" />
+            <Label fx:id="Ljumlah" layoutX="41.0" layoutY="141.0" prefHeight="27.0" prefWidth="169.0" text="Jumlah Sewa Dvd">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f8d10e" />
+                        <Stop color="#3508c6" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <TextField fx:id="editjumlah" layoutX="199.0" layoutY="137.0" prefHeight="25.0" prefWidth="169.0" style="-fx-background-color: blue;" />
+            <Label fx:id="LTelepon" layoutX="41.0" layoutY="174.0" text="Nomor Telepon">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f8d10e" />
+                        <Stop color="#3508c6" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <TextField fx:id="edittelepon" layoutX="204.0" layoutY="170.0" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: blue;" />
+            <Label fx:id="LPaket" layoutX="41.0" layoutY="211.0" text="Pilihan Paket Sewa Dvd">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f8d10e" />
+                        <Stop color="#3508c6" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
+            <RadioButton fx:id="film" layoutX="166.0" layoutY="211.0" mnemonicParsing="false" text="Dvd film">
+               <toggleGroup>
+                  <ToggleGroup fx:id="PilihanPaket" />
+               </toggleGroup>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f8d10e" />
+                        <Stop color="#3508c6" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </RadioButton>
+            <RadioButton fx:id="game" layoutX="256.0" layoutY="211.0" mnemonicParsing="false" text="Dvd Game" toggleGroup="$PilihanPaket">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f8d10e" />
+                        <Stop color="#3508c6" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></RadioButton>
+            <RadioButton fx:id="music" layoutX="166.0" layoutY="240.0" mnemonicParsing="false" text="Dvd Music" toggleGroup="$PilihanPaket">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f8d10e" />
+                        <Stop color="#3508c6" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></RadioButton>
+            <TextArea fx:id="textKonfirmasi" layoutX="45.0" layoutY="365.0" prefHeight="126.0" prefWidth="342.0" style="-fx-background-color: blue;" />
+            <Button fx:id="ButtonHapus" layoutX="228.0" layoutY="314.0" mnemonicParsing="false" onAction="#hapusIsian" prefHeight="25.0" prefWidth="57.0" text="Hapus" />
+            <Label fx:id="Ltanggal" layoutX="41.0" layoutY="268.0" text="Tanggal Peminjaman">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f8d10e" />
+                        <Stop color="#3508c6" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
+            <Label fx:id="Lbiji" layoutX="373.0" layoutY="141.0" text="biji">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#2810e0" />
+                        <Stop color="#ced10f" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
+            <TextField fx:id="edittanggal" layoutX="160.0" layoutY="264.0" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: blue;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
